@@ -2,7 +2,7 @@ import * as os from "os";
 
 export class OsSystem {
     getEOL() {
-        console.log(os.EOL);
+        console.log(JSON.stringify(os.EOL));
     }
     get_cpus() {
         const processors_number = os.cpus().length;
