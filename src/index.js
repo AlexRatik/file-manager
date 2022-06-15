@@ -1,5 +1,5 @@
 import readline from "node:readline";
-import { getUserName } from "./getUserName.js";
+import { getUserName } from "./utils/getUserName.js";
 import { MainThread } from "./MainThread.js";
 
 const USER_NAME = getUserName();

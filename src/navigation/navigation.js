@@ -1,7 +1,7 @@
 import path from "node:path";
 import fsPromises from "node:fs/promises";
-import { getHomeDir } from "./getHomeDirectory.js";
-import { list } from "./fs/list.js";
+import { list } from "./list.js";
+import { OsSystem } from "../osSystem/osSystem.js";
 
 export class Navigation {
     constructor() {
@@ -17,7 +17,7 @@ export class Navigation {
             return currentPath;
         }
         let newPath = "";
-        if (path_to_file.startsWith(getHomeDir())) {
+        if (path_to_file.startsWith(new OsSystem().getHomeDir())) {
             newPath = path_to_file;
         } else {
             newPath = path.join(currentPath, path_to_file);
